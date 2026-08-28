@@ -1,0 +1,146 @@
+:root {
+  --bg: #E6E1D3;
+  --surface: #F1ECE2;
+  --border: #CEC7B7;
+  --text: #38352C;
+  --accent-sage: #8A9E8D;
+  --border-sage: #B5BFB2;
+  --accent-rose: #B89290;
+  --border-rose: #CFB6B4;
+  --accent-burgundy: #8A5A65;
+  --border-burgundy: #A67580;
+  --nav-bg-glass: rgba(138, 90, 101, 0.85);
+  --nav-surface-glass: rgba(155, 108, 119, 0.7);
+
+  /* The last number controls opacity */
+  --nav-text: #F1ECE2;
+  --nav-text-muted: #D1B8BE;
+}
+
+body {
+  background-image: url('Book-nook.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding-top: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  background-color: var(--nav-bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 6px solid var(--border-burgundy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--nav-text-muted);
+  background-color: var(--nav-surface-glass);
+}
+
+.container {
+  max-width: 350px;
+  padding: 20px;
+  margin: 20px;
+  color: var(--text);
+  background-color: rgba(155, 108, 119, 0.6);
+  border-radius: 10px;
+  user-select: none;
+}
+
+#title {
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#start,
+#stop,
+#reset {
+  background-color: var(--accent-burgundy);
+  color: var(--surface);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:10px;
+}
+
+.time {
+  font-size: 20px;
+  color: var(--text);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+#booktitle{
+  background-color: var(--nav-bg-glass);
+  color: var(--nav-text);
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+  max-width:250px;
+  margin:20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#booktitle::placeholder{
+  color: var(--nav-text);
+  font-weight: bold;
+  font-size: 15px;
+}
+.input{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+}

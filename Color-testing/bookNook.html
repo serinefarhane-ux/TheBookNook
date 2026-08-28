@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="bookNook.css" />
+</head>
+<body>
+     <div class = "navbar">
+        <nav>
+          <ul>
+            <li>
+              <a href="home.html" id="cat">Home</a>
+            </li>
+            <li>
+              <a href="cat.html">Book Recs</a>
+            </li>
+            <li>
+              <a href="signup.html">Sign Up</a>
+            </li>
+            <li>
+              <a href="bookNook.html">Book Nook</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="input">
+        <div class="container" dragable="true">
+         <h1 id="title">Reading Stopwatch</h1>
+            <p class="time">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </p>
+            <div class="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            </div>
+        </div>
+        <textarea id="booktitle" placeholder="What book are you reading?" rows="2" cols="40"></textarea>
+
+      </div>
+      
+</body>
+<script>
+    // Your JavaScript code for the stopwatch functionality would go here
+    window.onload = function() {
+        let minutes = 0;
+        let seconds = 0;
+        let tens = 0;
+        let Interval;
+        let appendMinutes = document.getElementById("hours");
+        let appendSeconds = document.getElementById("minutes");
+        let appendTens = document.getElementById("seconds");
+        
+        let startButton = document.getElementById("start");
+        let stopButton = document.getElementById("stop");
+        let resetButton = document.getElementById("reset");
+
+
+        const startTimer = () =>{
+            tens++;
+            if(tens < 9){
+                appendTens.innerHTML = "0" + tens;
+            } else {
+                appendTens.innerHTML = tens;
+            }
+            if(tens > 99) {
+                seconds++;
+                appendSeconds.innerHTML = "0" + seconds;
+                tens = 0;
+                appendTens.innerHTML = "0" + 0;
+            }
+            if(seconds > 9) {
+                appendSeconds.innerHTML = seconds;
+            }
+            if(seconds > 59) {
+                  minutes++;
+                appendMinutes.innerHTML = "0" + minutes;
+                seconds = 0;
+                appendSeconds.innerHTML = "0" + 0;
+            }
+              
+
+        };
+
+
+
+
+        startButton.onclick = () => {
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 1000);
+        };
+
+        stopButton.onclick =() => {
+            clearInterval(Interval);
+        };
+        resetButton.onclick = () => {
+            clearInterval(Interval);
+            tens = "00";
+            seconds = "00";
+            minutes = "00";
+            appendTens.innerHTML = tens;
+            appendSeconds.innerHTML = seconds;
+            appendMinutes.innerHTML = minutes;
+        };
+        
+    };
+
+</script>
+</html>
