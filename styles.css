@@ -12,20 +12,23 @@
 
   --accent-burgundy: #8A5A65;
   --border-burgundy: #A67580;
-  
+
   --nav-bg-glass: rgba(138, 90, 101, 0.85);
   --nav-surface-glass: rgba(155, 108, 119, 0.7);
-  /* that last number is the opacity that is what makes it slightly see-through
-  i want to add a shadow as well but this could be what we may base our nav bar on?? maybe..... */
+
+  /* The last number is the opacity,
+     which makes it slightly see-through. */
+
   --nav-text: #F1ECE2;
   --nav-text-muted: #D1B8BE;
 }
 
 body {
   background-color: var(--bg);
-  margin: 0px;
+  margin: 0;
+  
   /* Adds space at the top so content doesn't hide behind the fixed nav */
-  padding-top: 40px; 
+  padding-top: 70px;
 }
 
 * {
@@ -35,7 +38,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Combined .navBar properties directly into nav for true sticking */
+/* Navigation bar */
+
 nav {
   position: fixed;
   top: 0;
@@ -43,20 +47,20 @@ nav {
   width: 100%;
   height: 70px;
   z-index: 100;
-  
+
   background-color: var(--nav-bg-glass);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  
-  /* FIXED: Switched to --border-burgundy so it actually shows up crisp */
+
   border-bottom: 6px solid var(--border-burgundy);
-  
+
   display: flex;
   align-items: center;
-  gap: 25px;
   justify-content: center;
-  gap:15px;
+
+  gap: 15px;
   padding: 0 25px;
+
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -64,6 +68,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+
   display: flex;
   align-items: center;
   gap: 25px;
@@ -73,8 +78,10 @@ nav a {
   text-decoration: none;
   color: var(--nav-text);
   font-weight: 700;
+
   padding: 8px 12px;
   border-radius: 6px;
+
   transition: all 0.2s ease;
 }
 
@@ -83,83 +90,272 @@ nav a:hover {
   background-color: var(--nav-surface-glass);
 }
 
-#readingbtn{
+/* Buttons */
+
+#readingbtn {
   color: var(--surface);
   font-weight: bold;
   font-size: 12px;
+
   padding: 8px 12px;
   border-radius: 15px;
+
   transition: all 0.2s ease;
+
   background-color: var(--border-rose);
+
   width: 240px;
   margin-bottom: 30px;
 }
-#explorelists{
+
+#explorelists {
   color: var(--surface);
   font-weight: bold;
   font-size: 15px;
+
   padding: 8px 12px;
   border-radius: 15px;
+
   transition: all 0.2s ease;
+
   background-color: var(--accent-burgundy);
-  width: 250px;}
-  #bookrecs{
+
+  width: 250px;
+}
+
+#bookrecs {
   color: var(--surface);
   font-weight: bold;
   font-size: 15px;
+
   padding: 8px 12px;
   border-radius: 15px;
+
   transition: all 0.2s ease;
+
   background-color: var(--accent-sage);
+
   width: 250px;
-  }
+}
+
 .linkBtn {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-  .bighome {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-#homeImage{
-  width:500px;
-  height:auto;
-  border:20px solid var(--surface);
+
+/* Home */
+
+.bighome {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#homeImage {
+  width: 500px;
+  height: auto;
+
+  border: 20px solid var(--surface);
   border-radius: 20px;
+
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
   margin-right: 40px;
+
   outline: 2px solid var(--border);
   outline-offset: 0px;
 }
-#favBook{
+
+#favBook {
   margin-bottom: 20px;
-  width:600px;
-  color:var(--text);
+  width: 600px;
+  color: var(--text);
 }
-.title{
+
+.title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-#welcome{
-  color:var(--surface);
+
+#welcome {
+  color: var(--text);
   font-size: 25px;
   font-weight: 300;
+
   margin-bottom: 20px;
-  color:var(--text);
-  width:718px
+  width: 718px;
 }
+
+/* Images */
+
+img {
+  width: 250px;
+  height: auto;
+
+  border-top: 2px solid var(--bg);
+  border-left: 20px solid var(--bg);
+  border-right: 20px solid var(--bg);
+  border-bottom: 2px solid var(--bg);
+
+  border-radius: 20px;
+
+  margin-right: 40px;
+
+  outline: 1px solid var(--border);
+  outline-offset: 0px;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  background-color: var(--surface);
+}
+
+#mao {
+  display: flex;
+  justify-content: center;
+}
+
+/* Genre */
+
+.genre {
+  font-size: 10px;
+  color: var(--surface);
+  font-weight: 1000;
+
+  padding: 5px;
+  border-radius: 15px;
+  margin-top: 10px;
+
+  background-color: var(--accent-rose);
+
+  width: 80px;
+
+  border: 1px solid var(--border-rose);
+}
+
+/* Book information */
+
+h4 {
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 400;
+
+  margin-bottom: 5px;
+
+  background-color: var(--surface);
+}
+
+#author {
+  font-weight: 400;
+  background-color: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+}
+
+.star {
+  color: #EBCA62;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  background-color: var(--surface);
+}
+
+/* Book recommendation flip card */
+
+.fullRec {
+  perspective: 1000px;
+  width: 300px;
+  height: 400px;
+}
+
+.fullRecinner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.fullRec:hover .fullRecinner {
+  transform: rotateY(180deg);
+}
+
+.recBack {
+  transform: rotateY(180deg);
+
+  border-top: 2px solid var(--surface);
+  border-left: 20px solid var(--surface);
+  border-right: 20px solid var(--surface);
+  border-bottom: 2px solid var(--surface);
+
+  border-radius: 20px;
+
+  background-color: var(--surface);
+
+  outline: 1px solid var(--border);
+  outline-offset: 0px;
+
+  width: 300px;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+
+  padding: 5px;
+}
+
+.recfront,
+.recBack {
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.recfront {
+  border-top: 2px solid var(--surface);
+  border-left: 20px solid var(--surface);
+  border-right: 20px solid var(--surface);
+  border-bottom: 2px solid var(--surface);
+
+  border-radius: 20px;
+
+  background-color: var(--surface);
+
+  outline: 1px solid var(--border);
+  outline-offset: 0px;
+
+  width: 300px;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  padding: 5px;
+}
+
+/* Footer */
+
 .footer {
   background-color: var(--surface);
+
   padding: 20px;
   text-align: center;
+
   border-top: 1px solid var(--border);
+
   position: fixed;
   bottom: 0;
+
   width: 100%;
 }
