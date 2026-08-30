@@ -90,6 +90,11 @@ nav a:hover {
   background-color: var(--nav-surface-glass);
 }
 
+
+
+
+/* THIS IS THE START OF THE HOMESCREEN CODE */
+
 /* Buttons */
 
 #readingbtn {
@@ -144,7 +149,7 @@ nav a:hover {
   gap: 20px;
 }
 
-/* Home */
+
 
 .bighome {
   display: flex;
@@ -192,7 +197,39 @@ nav a:hover {
   width: 718px;
 }
 
-/* Images */
+
+
+
+/* THIS IS THE START OF TEH BOOK REC CODE */
+/* Headings */
+.headings {
+  width: 900px;
+  margin: 60px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+}
+
+#picks {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent-burgundy);
+  margin-bottom: 10px;
+}
+
+#meow {
+  font-size: 40px;
+  font-weight: 1000;
+  color: var(--text);
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+}/* Images */
 
 img {
   width: 250px;
@@ -226,19 +263,42 @@ img {
   font-size: 10px;
   color: var(--surface);
   font-weight: 1000;
-
-  padding: 5px;
-  border-radius: 15px;
   margin-top: 10px;
-
-  background-color: var(--accent-rose);
-
-  width: 80px;
-
-  border: 1px solid var(--border-rose);
+  border-radius: 15px;
+  padding: 6px 12px;
+  width: 90px;
+  text-align: center;
+   border-radius: 15px;
 }
 
+.romance {
+  background-color: var(--accent-rose);
+  border: 1px solid var(--border-rose);
+  border-radius: 15px;
+  padding: 6px 12px;
+  width: 90px;
+  text-align: center;
+}
+
+.romantasy {
+  background-color: var(--accent-sage);
+  border: 1px solid var(--border-sage);
+  border-radius: 15px;
+  padding: 6px 12px;
+  width: 90px;
+  text-align: center;
+}
 /* Book information */
+.everysinglerec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+
 
 h4 {
   color: var(--text);
@@ -347,7 +407,7 @@ h4 {
 /* Footer */
 
 .footer {
-  background-color: var(--surface);
+  background-color: var(--accent-burgundy);
 
   padding: 20px;
   text-align: center;
@@ -358,4 +418,17 @@ h4 {
   bottom: 0;
 
   width: 100%;
+
+  margin-top:50px;
+  color: var(--nav-text-muted)
+}
+.footer a{
+  text-decoration: none;
+  color: var(--nav-text-muted);
+}
+.footer-content-second{
+  width:400px;
+}
+.footer-content-middle{
+  width:400px;
 }
