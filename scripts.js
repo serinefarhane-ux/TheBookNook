@@ -27,7 +27,7 @@ const bookInput = document.getElementById("song-input");
 const notesInput = document.getElementById("mind-input");
 const goalInput = document.getElementById("goal-input");
 
-const saveButton = document.getElementById(".save-button");
+const saveButton = document.querySelector(".save-button");
 
 const moodButtons = document.querySelectorAll(".mood-button");
 const minutesButtons = document.querySelectorAll(".minutes-button");
