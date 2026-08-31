@@ -34,6 +34,19 @@ const minutesButtons = document.querySelectorAll(".minutes-button");
 let selectedMood = "";
 let selectedMinutes="";
 
+moodButtons.forEach(function(button){
+button.addEventListener("click", function() {
+    selectedMood = button.textContent;
+});
+});
+
+minutesButtons.forEach(function(button){
+    button.addEventListener("click", function(){
+        selectedMinutes = button.textContent;
+    });
+});
+
+
 
 
 
