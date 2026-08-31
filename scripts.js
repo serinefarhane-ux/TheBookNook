@@ -47,7 +47,21 @@ minutesButtons.forEach(function(button){
 });
 
 
+saveButton.addEventListener("click", function(){
+    const entry = {
+        date: dateInput.value,
+        book: bookInput.value,
+        mood: selectedMood,
+        minutes: selectedMinutes,
+        notes: notesInput.value,
+        goal: goalInput.value
+    });
 
+const entries = JSON.parse(localStorage.getItem("readingEntries")) || [];
+    entries.push(entry);
+    localStorage.setItem("readingEntries", JSON.stringify(entries));
+    alert("Entry saved!");
+});
 
 
 
