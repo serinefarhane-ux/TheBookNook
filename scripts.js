@@ -43,6 +43,7 @@ button.addEventListener("click", function() {
 minutesButtons.forEach(function(button){
     button.addEventListener("click", function(){
         selectedMinutes = button.textContent;
+        
     });
 });
 
