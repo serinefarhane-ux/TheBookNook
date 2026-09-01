@@ -34,11 +34,13 @@
       <h3 id="picks">Check out our latest picks! Hover over the cards to see more information.</h3>
  
       </div>
+      <div class="filterbuttons1">
+         <div id="filterheading"><h3>FILTER BY GENRE:</h3></div>
 
   <div class="filter-buttons">
     <button class="btn active" data-filter="all">Show All</button>
     <button class="btn" data-filter="mystery">MYSTERY</button>
-    <button class="btn" data-filter="comedy">CLASSIC</button>
+    <button class="btn" data-filter="classic">CLASSIC</button>
     <button class="btn" data-filter="thriller">THRILLER</button>
     <button class="btn" data-filter="fantasy">FANTASY</button>
     <button class="btn" data-filter="romance">ROMANCE</button>
@@ -48,6 +50,25 @@
     <button class="btn" data-filter="dystopian">DYSTOPIAN</button>
     <button class="btn" data-filter="fiction">FICTION</button>
   </div>
+      </div>
+     
+  <style>
+    #filterheading{
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .filterbuttons1{
+       background-color:var(--surface);
+       padding:20px;
+       border: 1px solid var(--border);
+       border-radius:20px;
+       width:950px;
+       margin:40px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+  </style>
 
       <div class="everysinglerec">
         <div class="fullRec" data-genre="romantasy">
