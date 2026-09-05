@@ -27,6 +27,9 @@
             <li>
                 <a href="reading.html">Reading Log</a>
             </li>
+              <li>
+                <a href="TBR.html">TBR List</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -34,50 +37,81 @@
         <h1>Reading Log</h1>
 
     <div class="journal-card">
-      <div class="section">
+        <div class="butn1">
+             <div class="section">
         <label for="date">Date of entry</label>
         <input type="date" id="date" />
       </div>
-  <div class="section">
+        </div>
+     <div class="butn1">
+         <div class="section">
         <label for="song-input"
           ><h2>What book did you read today?</h2></label
         >
-        <input type="text" id="song-input" placeholder="Type a book title..." />
+        <input type="text" id="song-input" placeholder="What book did you read..." />
       </div>
-     <div class="mood-options">
-  <button type="button" class="mood-button">😣</button>
-  <button type="button" class="mood-button">😔</button>
-  <button type="button" class="mood-button">😐</button>
-  <button type="button" class="mood-button">😊</button>
-  <button type="button" class="mood-button">😁</button>
-</div>
+     </div>
+ 
+      <div class="butn">
+        <div class="section">
+        <div class="column">
+            <label for="mind-input"><h2>How much did you like it?</h2></label>
+        </div>
+        <div class="butn">
+             <textarea
+          id="mind-input"
+          rows="2"
+          placeholder="Was it any good..."
+        ></textarea>
+        </div>
+        
+        </div>
+       
+   
+      <style>
+        .butn{
+            display:flex;
+            justify-content:space-evenly;
+        }
+        .butn1{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-evenly;
+        }
+      </style>
 
      
 
-      <div class="stress-options">
-  <button type="button" class="minutes-button">0-10 min</button>
-  <button type="button" class="minutes-button">11-20 min</button>
-  <button type="button" class="minutes-button">21-30 min</button>
-  <button type="button" class="minutes-button">31-40 min</button>
-  <button type="button" class="minutes-button">41-50 min</button>
-  <button type="button" class="minutes-button">51-60 min</button>
-  <button type="button" class="minutes-button">60+ min</button>
-</div>
+      
+         <div class="section">
+        <label for="mind-input"><h2>How long did you read today?</h2></label>
+        <textarea
+          id="mind-input1"
+          rows="2"
+          placeholder="how long did you read for..."
+        ></textarea>
+      </div>
 
+      </div>
+
+
+
+       
     
 
       <div class="section">
         <label for="mind-input"><h2>Notes?</h2></label>
         <textarea
-          id="mind-input"
+          id="mind-input2"
           rows="6"
-          placeholder="Write anything you'd like..."
+          placeholder="Tell me what you read..."
         ></textarea>
       </div>
 
+      
 
       <div class="section">
-        <label for="goal-input"><h2>Reading goal for tomorrow</h2></label>
+        <label for="goal-input"><h2>Goal for tomorrow</h2></label>
         <textarea
           id="goal-input"
           rows="3"
@@ -134,6 +168,5 @@
 
 
   </body>
-    <script src="script.js"></script>
+    <script src="reading.js"></script>
 </html>
-
