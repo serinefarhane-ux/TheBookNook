@@ -26,6 +26,9 @@
             <li>
                 <a href="reading.html">Reading Log</a>
             </li>
+              <li>
+                <a href="TBR.html">TBR List</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -49,6 +52,7 @@
     <button class="btn" data-filter="historical">HISTORICAL</button>
     <button class="btn" data-filter="dystopian">DYSTOPIAN</button>
     <button class="btn" data-filter="fiction">FICTION</button>
+    <button class="btn" data-filter="nonfic">NONFICTION</button>
   </div>
       </div>
      
@@ -69,9 +73,8 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
   </style>
-
-      <div class="everysinglerec">
-        <div class="fullRec" data-genre="romantasy">
+  <div class="everysinglerec">
+        <div class="fullRec" data-book-id="book1" data-genre="romantasy">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/14724498-L.jpg" alt="six crimson cranes"/>
@@ -98,10 +101,11 @@
         <h3>Perfect for fans of</h3>
         <span>MYTHOLOGY</span>
         <span>SLOW BURN</span>
+        <button id="Six Crimson Cranes" class="add-btn">+</button>
     </div>
     </div>  
  </div>
- <div class="fullRec"data-genre="romance">
+ <div class="fullRec"data-genre="romance" data-book-id="book2">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/15112751-L.jpg" alt="the summer i turned pretty"/>
@@ -129,11 +133,12 @@
         <h3>Perfect for fans of</h3>
         <span>LOVE TRIANGLE</span>
         <span>COMMING OF AGE</span>
+        <button id="The Summer I Turned Pretty" class="add-btn">+</button>
     </div>
     </div>  
 </div>
 
-<div class="fullRec" data-genre="mystery">
+<div class="fullRec" data-genre="mystery" data-book-id="book3">
     <div class="fullRecinner">
         <div class="recfront">
       <img id="s"class="bookcover" src="https://covers.openlibrary.org/b/id/14755875-L.jpg" alt="the inheritance games"/>
@@ -160,12 +165,13 @@
         <h3>Perfect for fans of</h3>
         <span>Thrillers</span>
         <span>ROMANCE</span>
+        <button id="The Inheritance Games" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="romantasy">
+<div class="fullRec" data-genre="romantasy" data-book-id="book4">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/15172588-L.jpg" alt="caraval"/>
@@ -190,17 +196,18 @@
         <h3>Perfect for fans of</h3>
         <span>MAGIC</span>
         <span>SLOW BURN SUBPLOT</span>
+        <button id="Caraval" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="fantasy">
+<div class="fullRec" data-genre="fantasy" data-book-id="book5">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/15154301-L.jpg" alt="six of crows"/>
       <div class="genre">
-        <div class="romantasy">
+        <div class="fantasy">
             <p>FANTASY</p>
         </div>
       </div>
@@ -220,17 +227,18 @@
  <h3>Perfect for fans of</h3>
  <span>ADVENTURE</span>
  <span>DARK FANTASY</span>
+ <button id="Six of Crows" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="fantasy">
+<div class="fullRec" data-genre="fantasy" data-book-id="book6">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/14678410-L.jpg" alt="legendborn"/>
       <div class="genre">
-        <div class="romantasy">
+        <div class="fantasy">
             <p>FANTASY</p>
         </div>
       </div>
@@ -250,12 +258,13 @@
     <h3>Perfect for fans of</h3>
     <span>MAGIC</span>
     <span>URBAN FANTASY</span>
+    <button id="Legendborn" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="romance">
+<div class="fullRec" data-genre="romance" data-book-id="book7">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/15139180-L.jpg" alt="to all the boys i've loved before"/>
@@ -280,17 +289,18 @@
    <h3>Perfect for fans of</h3>
    <span>CLASSIC ROMANCE</span>
    <span>FAKE DATING</span>
+   <button id="To All the Boys I've Loved Before" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="fantasy">
+<div class="fullRec" data-genre="fantasy" data-book-id="book8">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/12614819-L.jpg" alt="the girl who fell beneath the sea"/>
       <div class="genre">
-        <div class="romantasy">
+        <div class="fantasy">
             <p>FANTASY</p>
         </div>
       </div>
@@ -310,12 +320,13 @@
    <h3>Perfect for fans of</h3>
    <span>MYTHOLOGY</span>
    <span>ROMANCE SUB-PLOT</span>
+   <button id="The Girl Who Fell Beneath the Sea" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec"data-genre="romantasy">
+<div class="fullRec"data-genre="romantasy" data-book-id="book9">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/15174244-L.jpg" alt="once upon a broken heart"/>
@@ -340,12 +351,13 @@
    <h3>Perfect for fans of</h3>
    <span>MAGICAL INTERVENTION</span>
    <span>SLOW BURN</span>
+   <button id="Once Upon a Broken Heart" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="mystery">
+<div class="fullRec" data-genre="mystery" data-book-id="book10">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/12569142-L.jpg" alt="the red palace"/>
@@ -370,12 +382,13 @@
     <h3>Perfect for fans of</h3>
     <span>HISTORICAL FICTION</span>
     <span>ROYAL CONSPIRACY</span>
+    <button id="The Red Palace" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="mystery">
+<div class="fullRec" data-genre="mystery" data-book-id="book11">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/14839805-L.jpg" alt="a good girl's guide to murder"/>
@@ -400,12 +413,13 @@
    <h3>Perfect for fans of:</h3>
    <span>ROMANCE SUBPLOTS</span>
    <span>FAST PACING</span>
+   <button id="A Good Girl's Guide to Murder" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="romance">
+<div class="fullRec" data-genre="romance" data-book-id="book12">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/14825726-L.jpg" alt="love and gelato"/>
@@ -430,12 +444,13 @@
     <h3>Perfect for fans of</h3>
     <span>CONTEMPORARY ROMANCE</span>
     <span>TRAVEL</span>
+    <button id="Love & Gelato" class="add-btn">+</button>
     </div>
     </div>
 </div>
 
 
-<div class="fullRec" data-genre="romance">
+<div class="fullRec" data-genre="romance" data-book-id="book13">
     <div class="fullRecinner">
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/13222887-L.jpg" alt="today tonight tomorrow"/>
@@ -460,9 +475,13 @@
     <h3>Perfect for fans of</h3>
     <span>ENEMIES TO LOVERS</span>
     <span>SLOW BURN</span>
+    <button id="Today Tonight Tomorrow" class="add-btn">+</button>
     </div>
     </div>
 </div>
+
+
+<!-- this is the end of the add btn flipcards im js testing smth -->
 
 
 <div class="fullRec" data-genre="romance">
@@ -500,7 +519,7 @@
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/12873090-L.jpg" alt="the gilded ones"/>
       <div class="genre">
-        <div class="romantasy">
+        <div class="fantasy">
             <p>FANTASY</p>
         </div>
       </div>
@@ -531,7 +550,7 @@
         <div class="recfront">
       <img class="bookcover" src="https://covers.openlibrary.org/b/id/15218206-L.jpg" alt="red queen"/>
       <div class="genre">
-        <div class="romantasy">
+        <div class="fantasy">
             <p>FANTASY</p>
         </div>
       </div>
@@ -624,7 +643,7 @@
             <div class="recfront">
                 <img class="bookcover" src="https://covers.openlibrary.org/b/id/14596711-L.jpg" alt="A Thousand Splendid Suns">
                 <div class="genre">
-                    <div class="contemporary">
+                    <div class="romance">
                         <p>HISTORICAL</p>
                     </div>
                 </div>
@@ -1013,7 +1032,7 @@
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/8315357-L.jpg" alt="Beneath a Scarlet Sky">
             <div class="genre">
-                <div class="contemporary">
+                <div class="romance">
                     <p>HISTORICAL</p>
                 </div>
             </div>
@@ -1100,7 +1119,7 @@
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/14357063-L.jpg" alt="Band of Brothers">
             <div class="genre">
-                <div class="contemporary">
+                <div class="romance">
                     <p>HISTORICAL</p>
                 </div>
             </div>
@@ -1274,7 +1293,7 @@
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/14873869-L.jpg" alt="Inside Out and Back Again">
             <div class="genre">
-                <div class="contemporary">
+                <div class="romance">
                     <p>HISTORICAL</p>
                 </div>
             </div>
@@ -1738,7 +1757,7 @@
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/13872888-L.jpg" alt="As Long as the Lemon Trees Grow">
             <div class="genre">
-                <div class="contemporary">
+                <div class="romance">
                     <p>HISTORICAL</p>
                 </div>
             </div>
@@ -1767,7 +1786,7 @@
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/15089714-L.jpg" alt="Alex and Eliza">
             <div class="genre">
-                <div class="contemporary">
+                <div class="romance">
                     <p>HISTORICAL</p>
                 </div>
             </div>
@@ -2226,7 +2245,7 @@
 
 
 <!-- 43. BECOMING -->
-<div class="fullRec" data-genre="fiction">
+<div class="fullRec" data-genre="nonfic">
     <div class="fullRecinner">
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/8565814-L.jpg" alt="Becoming">
@@ -2255,7 +2274,7 @@
 
 
 <!-- 44. WHAT THE EYES DON'T SEE -->
-<div class="fullRec" data-genre="fiction">
+<div class="fullRec" data-genre="nonfic">
     <div class="fullRecinner">
         <div class="recfront">
             <img class="bookcover" src="https://covers.openlibrary.org/b/id/14623996-L.jpg" alt="What the Eyes Don't See">
