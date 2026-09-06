@@ -1,68 +1,88 @@
 
 
+let fav = JSON.parse(localStorage.getItem("fav")) || [];
+const numBooks = document.querySelector("#mao1");
+const circle = document.querySelectorAll(".h2");
 
-
-
-
-const circle = document.getElementById("h2");
 function changeText() {
-    // this changes the color of the circle element to a specific hex color code when clicked
-    circle.style.color = "#A67580";
 
-    // this is basically a toggle function that changes the text content of the circle element between "♥" and "♡" when clicked
-    if (circle.textContent === "♥") {
-        circle.textContent = "♡"; 
+    // Changes the color of the heart
+    this.style.color = "#A67580";
+
+    // Toggles between the heart symbols
+    if (this.textContent === "♥") {
+
+        this.textContent = "♡";
+
     } else {
-        circle.textContent = "♥"; 
+
+        this.textContent = "♥";
+    }
+
+    let card = this.closest(".fullRec");
+
+    let bookID = card.dataset.bookId;
+
+    if (!fav.includes(bookID)) {
+
+        fav.push(bookID);
+
+        localStorage.setItem("fav", JSON.stringify(fav));
+
+        alert("Book has been added to your Favorites list");
+
+    } else {
+
+        alert("Book is already in your Favorites list");
     }
 }
 
-  
+circle.forEach(c => c.addEventListener("click", changeText));
 
-circle.addEventListener("click", changeText);
+function updateBookCount() {
+    if (fav.length === 1) {
+        numBooks.textContent = `You have ${fav.length} book in your Favorites List`;
+    } else {
+        numBooks.textContent = `You have ${fav.length} books in your Favorites List`;
+    }
+}
 
+updateBookCount();
 
-const dateInput = document.getElementById("date");
-const bookInput = document.getElementById("song-input");
-const notesInput = document.getElementById("mind-input");
-const goalInput = document.getElementById("goal-input");
-
-const saveButton = document.querySelector(".save-button");
-
-const moodButtons = document.querySelectorAll(".mood-button");
-const minutesButtons = document.querySelectorAll(".minutes-button");
-let selectedMood = "";
-let selectedMinutes="";
-
-moodButtons.forEach(function(button){
-button.addEventListener("click", function() {
-    selectedMood = button.textContent;
-});
-});
-
-minutesButtons.forEach(function(button){
-    button.addEventListener("click", function(){
-        selectedMinutes = button.textContent;
-        
-    });
-});
+// DISPLAY FILTER CODE
+function displayFilter() {
+    const filter=document.querySelector(".filterbuttons1");
+    if (fav.length < 4) {
+        filter.style.display = "none";
+    } else {
+        filter.style.display = "block";
+    }
+}
+displayFilter();
 
 
-saveButton.addEventListener("click", function(){
-    const entry = {
-        date: dateInput.value,
-        book: bookInput.value,
-        mood: selectedMood,
-        minutes: selectedMinutes,
-        notes: notesInput.value,
-        goal: goalInput.value
-    });
 
-const entries = JSON.parse(localStorage.getItem("readingEntries")) || [];
-    entries.push(entry);
-    localStorage.setItem("readingEntries", JSON.stringify(entries));
-    alert("Entry saved!");
+const cards = document.querySelectorAll(".fullRec");
+
+cards.forEach(card => {
+
+    let bookID = card.dataset.bookId;
+    if (fav.includes(bookID)) {
+        card.classList.add("active");
+    } else {
+        card.style.display = "none";
+    }
+
 });
 
 
+const resetBtn1 = document.querySelector("#reset1");
 
+resetBtn1.addEventListener('click', () =>{
+    if (confirm("Are you sure you want to clear your Favorites list. This action cannot be undone")) {
+        localStorage.removeItem("fav");
+        fav = [];
+        updateBookCount();
+        location.reload();  
+    }
+})
