@@ -24,25 +24,49 @@ buttons.forEach(button => {
 });
 
 
-// This is the TBR list code....
+// DOM for tbr page....
 
 let tbr = JSON.parse(localStorage.getItem("tbr")) || [];
 localStorage.setItem("tbr", JSON.stringify(tbr));
 
+const bookNumber = document.querySelector("#mao");
+const resetBtn = document.querySelector("#reset");
 
-
+// add button code
 const addButton = document.querySelectorAll(".add-btn");
+// END OF DOM CODE
 
 addButton.forEach(button => {
     button.addEventListener('click',()=> {
 let card = button.closest(".fullRec");
 let bookID = card.dataset.bookId;
-tbr.push(bookID);
+if (!tbr.includes(bookID)) {
+    tbr.push(bookID);
+    localStorage.setItem("tbr", JSON.stringify(tbr));
+}
 localStorage.setItem("tbr", JSON.stringify(tbr));
-alert("Book Has been added to your TBR list");
-
+if (!tbr.includes(bookID)) {
+    alert("Book Has been added to your TBR list");
+} else {
+    alert("Book is already in your TBR list");
+}   
     })
 })
+// end of add button code
 
 
+// this is telling users how many books they have in their tbr lists
+function updateBookCount() {
+    if (tbr.length === 1) {
+        bookNumber.textContent = `You have ${tbr.length} book in your TBR List`;
+    } else {
+        bookNumber.textContent = `You have ${tbr.length} books in your TBR List`;
+    }
+}
 
+updateBookCount();
+
+resetBtn.addEventListener('click', () =>{
+    alert("Are you sure you want to clear your TBR list. This action cannot be undone");
+    localStorage.removeItem("tbr");
+})
