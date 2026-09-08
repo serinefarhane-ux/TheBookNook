@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Lists</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class = "navbar">
+        <nav>
+          <ul>
+            <li>
+              <a href="home.html" id="cat">Home</a>
+            </li>
+            <li>
+              <a href="cat.html">Book Recs</a>
+            </li>
+            <li>
+              <a href="signup.html">Sign Up</a>
+            </li>
+            <li>
+              <a href="bookNook.html">Book Nook</a>
+            </li>
+            <li>
+                <a href="reading.html">Reading Log</a>
+            </li>
+              <li>
+          <div class="dropdown">
+          <a href="readinglists.html">Reading Lists</a>
+          <div class="dropdown-content" id="dropdown1">
+            <a href="TBR.html">TBR List</a>
+            <a href="fav.html">Favorite Books</a>
+          </div>
+        </div>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    
 
+       <div class="headings">
+             <h1 id="meow">Reading Lists</h1>
+      <h3 class="picks">Check out the different reading lists! Hover over the cards to see more information.</h3>
+     
+      
+       </div>
+         <details>
+  <summary>TBR List</summary>
+  <p>The TBR (To Be Read) List is a collection of books you're planning to read in the future.</p>
+   <a href="TBR.html">View TBR List</a>
+</details>
+<details>
+  <summary>Favorite Books</summary>
+  <p>The Favorite Books list is a collection of books that you have read and loved, which you want to keep track of.</p>
+  <a href="fav.html">View Favorite Books</a>
+</details>
+
+
+
+
+<style>
+        .picks{
+            font-size: 15px;
+            color:var(--accent-burgundy);
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        details summary {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color:var(--accent-burgundy);
+        }
+        details p {
+            font-size: 16px;
+            margin-top: 5px;
+            color:var(--accent-burgundy);
+            font-weight:bold;
+        }
+        details a {
+            display: inline-block;
+            margin-top: 5px;
+            text-decoration: none;
+            color:var(--border-burgundy);
+            font-weight:bold;
+        }
+        details a:hover {
+            color:var(--accent-rose);
+        }
+        details{
+            background-color:var(--surface);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            border: 1px solid var(--border);
+            min-width:100px;
+            max-width: 400px;
+        }
+      </style>
+
+ <div class="footer">
+    <div class="footerinner">
+         <div class="footer-content-second">
+        <div class="book">
+            <h3 id="star">❀</h3>
+             <h3>THE BOOK NOOK</h3>
+        </div>
+        <p>The Book Nook is a cozy corner for teen book lovers to explore new stories, track their shelves, and find their next favorite read. Join our community and embark on a reading journey today!</p>
+    </div>
+     <div class="footer-content-left">
+        <h3>CONTACT US</h3>
+        <p>Follow us on social media:</p>
+        <!-- these are just placeholders -->
+        <p>Instagram: @thebooknook</p>
+        <p>Twitter: @thebooknook</p>
+        <p>Facebook: The Book Nook</p>
+        <p class="mao">
+            <a href="mailto:devdivas24@gmail.com">devdivas24@gmail.com</a>
+        </p> 
+
+    </div>
+    <div class="footer-content-middle">
+        <div class="meo"> 
+            <h3><a href="meet.html">MEET THE TEAM</a></h3>
+        </div>
+        <p>Our team is made up of passionate book lovers who are dedicated to creating a welcoming space for readers of all ages. We believe in the power of stories to inspire, educate, and connect people from all walks of life.</p>
+    </div>
+    <div class="feedback">
+        <h3>FEEDBACK</h3>
+
+        <div class="mao">
+            <p>Here at the Book Nook we take user experience very seriously. Take a moment to fill our our <a href="https://forms.gle/zdKPU2ScyHsLQFj4A">Feedback Form</a> today!</p></div>
+    </div>
+    </div>
+   <hr>
+<p id="m">© 2026 The Book Nook. All rights reserved. Ratings sourced from Goodreads. Cover images sourced from Open Library API</p>
+  </div>
+<script src="scripts.js"></script>
+<script src="filter.js"></script>
+
+</body>
+</html>
