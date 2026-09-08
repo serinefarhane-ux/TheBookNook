@@ -1,4 +1,3 @@
-
 const nameElement = document.getElementById("name");
 
 // 1. Load the saved name immediately when the page opens
