@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML + CSS</title>
+    <title>Book Recommendations</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-      <div class = "navbar">
+     <div class = "navbar">
         <nav>
           <ul>
             <li>
@@ -27,11 +27,20 @@
                 <a href="reading.html">Reading Log</a>
             </li>
               <li>
-                <a href="TBR.html">TBR List</a>
+          <div class="dropdown">
+          <a href="readinglists.html">Reading Lists</a>
+          <div class="dropdown-content" id="dropdown1">
+            <a href="TBR.html">TBR List</a>
+            <a href="fav.html">Favorite Books</a>
+          </div>
+        </div>
             </li>
+            <li><a href="profile.html">Profile</a></li>
+            
           </ul>
         </nav>
       </div>
+    
       <div class="headings">
              <h1 id="meow">Book Recommendations</h1>
       <h3 id="picks">Check out our latest picks! Hover over the cards to see more information.</h3>
