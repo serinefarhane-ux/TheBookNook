@@ -90,6 +90,47 @@ nav a:hover {
   background-color: var(--nav-surface-glass);
 }
 
+.dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+ }
+ 
+ 
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--nav-bg-glass);
+  min-width: 150px;
+  z-index: 101;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+ }
+ 
+ 
+ .dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  color: white;
+  white-space: nowrap;
+ }
+ 
+ 
+ .dropdown-content a:hover {
+  background-color: var(--nav-surface-glass);
+  color: var(--nav-text-muted);
+ }
+ 
+ 
+ .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+ }
+ 
+ 
 
 
 
