@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book Nook</title>
       <link rel="stylesheet" href="bookNook.css" />
 </head>
 <body>
-     <div class = "navbar">
+   <div class = "navbar">
         <nav>
           <ul>
             <li>
@@ -22,9 +22,25 @@
             <li>
               <a href="bookNook.html">Book Nook</a>
             </li>
+            <li>
+                <a href="reading.html">Reading Log</a>
+            </li>
+              <li>
+          <div class="dropdown">
+          <a href="readinglists.html">Reading Lists</a>
+          <div class="dropdown-content" id="dropdown1">
+            <a href="TBR.html">TBR List</a>
+            <a href="fav.html">Favorite Books</a>
+          </div>
+        </div>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+            
           </ul>
         </nav>
       </div>
+    
+      <div class="topclass"></div>
       <div class="input">
         <div class="container" dragable="true">
          <h1 id="title">Reading Stopwatch</h1>
@@ -36,13 +52,26 @@
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
             </div>
+            </div>
         </div>
+        <div class="topClass"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0wKpD13w1PmNH7MGlrkwZs?utm_source=generator&si=d4dfe344ada24797" width="350" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+   
         <textarea id="booktitle" placeholder="What book are you reading?" rows="2" cols="40"></textarea>
 
-      </div>
+    
       
+     
+<style>
+   iframe{
+    margin-left: 20px;
+    margin-top:20px;
+    margin-bottom:0px;
+   }
+</style>
 </body>
 <script>
+   
     // Your JavaScript code for the stopwatch functionality would go here
     window.onload = function() {
         let minutes = 0;
@@ -106,6 +135,6 @@
         };
         
     };
-
+ alert("Be sure you are logged into Spotify to listen to the full tracks");
 </script>
 </html>
