@@ -1,1 +1,393 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+ <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class = "navbar">
+        <nav>
+          <ul>
+            <li>
+              <a href="home.html" id="cat">Home</a>
+            </li>
+            <li>
+              <a href="cat.html">Book Recs</a>
+            </li>
+            <li>
+              <a href="signup.html">Sign Up</a>
+            </li>
+            <li>
+              <a href="bookNook.html">Book Nook</a>
+            </li>
+            <li>
+                <a href="reading.html">Reading Log</a>
+            </li>
+              <li>
+          <div class="dropdown">
+          <a href="readinglists.html">Reading Lists</a>
+          <div class="dropdown-content" id="dropdown1">
+            <a href="TBR.html">TBR List</a>
+            <a href="fav.html">Favorite Books</a>
+          </div>
+        </div>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+
+      <div class="profilePageWrap">
+
+        <div class="fulltopprofile">
+          <div class="profileHeader">
+            <img class="profileImg" src="profile.png" alt="profile image" />
+            <div class="profileNameBlock">
+              <input id="name" placeholder="Enter your name">
+              <span class="cardLine"></span>
+            </div>
+          </div>
+
+          <p id="bio" class="bioLine" contenteditable="true" data-placeholder="Write a short bio about yourself"></p>
+
+          <div class="favBookRow">
+            <span class="favBookLabel">Currently loving</span>
+            <input id="favBook" placeholder="Type your favorite book">
+          </div>
+
+          <p id="joinDate" class="joinStamp"></p>
+        </div>
+
+        <div class="selectorColumn">
+
+          <div class="savedGenres">
+            <div class="headingGenres">
+            <h3 style="color: var(--text);">Select Your Favorite Genres</h3>
+            <h4 id="savedGenres"></h4>
+            </div>
+            <div class="allGenres">
+            <p class="genre1">Non-Fiction</p>
+            <p class="genre2">Mystery</p>
+            <p class="genre">Romance</p>
+            <p class="genre1">Fantasy</p>
+            <p class="genre2">Science Fiction</p>
+            <p class="genre">Historical Fiction</p>
+            <p class="genre1">Biography</p>
+            <p class="genre2">Poetry</p>
+            <p class="genre">Thriller</p>
+            <p class="genre1">Young Adult</p>
+            <p class="genre2">Graphic Novels</p>
+            </div>
+          </div>
+
+          <div class="savedGenres">
+            <div class="headingGenres">
+            <h3 style="color: var(--text);">Select Your Favorite Authors</h3>
+            <h4 id="savedAuthors"></h4>
+            </div>
+            <div class="allGenres">
+            <p class="author1">Colleen Hoover</p>
+            <p class="author2">Sarah J. Maas</p>
+            <p class="author">Suzanne Collins</p>
+            <p class="author1">Rick Riordan</p>
+            <p class="author2">J.K. Rowling</p>
+            <p class="author">Stephen King</p>
+            <p class="author1">Jane Austen</p>
+            <p class="author2">Agatha Christie</p>
+            <p class="author">Leigh Bardugo</p>
+            <p class="author1">John Green</p>
+            <p class="author2">Taylor Jenkins Reid</p>
+            <p class="author">Fredrik Backman</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+<div class="footer">
+    <div class="footerinner">
+         <div class="footer-content-second">
+        <div class="book">
+            <h3 id="star">❀</h3>
+             <h3>THE BOOK NOOK</h3>
+        </div>
+        <p>The Book Nook is a cozy corner for teen book lovers to explore new stories, track their shelves, and find their next favorite read. Join our community and embark on a reading journey today!</p>
+    </div>
+     <div class="footer-content-left">
+        <h3>CONTACT US</h3>
+        <p>Follow us on social media:</p>
+        <!-- these are just placeholders -->
+        <p>Instagram: @thebooknook</p>
+        <p>Twitter: @thebooknook</p>
+        <p>Facebook: The Book Nook</p>
+        <p class="mao">
+            <a href="mailto:devdivas24@gmail.com">devdivas24@gmail.com</a>
+        </p> 
+
+    </div>
+    <div class="footer-content-middle">
+        <div class="meo"> 
+            <h3><a href="meet.html">MEET THE TEAM</a></h3>
+        </div>
+        <p>Our team is made up of passionate book lovers who are dedicated to creating a welcoming space for readers of all ages. We believe in the power of stories to inspire, educate, and connect people from all walks of life.</p>
+    </div>
+    <div class="feedback">
+        <h3>FEEDBACK</h3>
+
+        <div class="mao">
+            <p>Here at the Book Nook we take user experience very seriously. Take a moment to fill our our <a href="https://forms.gle/zdKPU2ScyHsLQFj4A">Feedback Form</a> today!</p></div>
+    </div>
+    </div>
+   <hr>
+<p id="m">© 2026 The Book Nook. All rights reserved. Ratings sourced from Goodreads. Cover images sourced from Open Library API</p>
+  </div>
+
+    <style>
+        .genre, .genre1, .genre2, .author, .author1, .author2{
+            display:inline-block;
+            margin:5px;
+            padding:10px;
+            border-radius:15px;
+            color:var(--bg);
+            font-weight:normal;
+            font-size:12px;
+        }
+        .genre.active{
+            background-color:var(--accent-rose);
+            border:1px solid var(--border-rose);
+        }
+        .genre1.active{
+            background-color:var(--accent-sage);
+            border:1px solid var(--border-sage);
+        }
+        .genre2.active{
+            background-color:var(--accent-burgundy);
+            border:1px solid var(--border-burgundy);
+        }
+        .author.active{
+            background-color:var(--accent-rose);
+            border:1px solid var(--border-rose);
+        }
+        .author1.active{
+            background-color:var(--accent-sage);
+            border:1px solid var(--border-sage);
+        }
+        .author2.active{
+            background-color:var(--accent-burgundy);
+            border:1px solid var(--border-burgundy);
+        }
+        .genre:hover, .genre1:hover, .genre2:hover,
+        .author:hover, .author1:hover, .author2:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .genre{
+            background-color:var(--border-rose);
+            border:1px solid var(--border-rose);
+        }
+        .genre1{
+            background-color:var(--border-sage);
+            border:1px solid var(--border-sage);
+        }
+        .genre2{
+            background-color:var(--border-burgundy);
+            border:1px solid var(--border-burgundy);
+        }
+        .author{
+            background-color:var(--border-rose);
+            border:1px solid var(--border-rose);
+        }
+        .author1{
+            background-color:var(--border-sage);
+            border:1px solid var(--border-sage);
+        }
+        .author2{
+            background-color:var(--border-burgundy);
+            border:1px solid var(--border-burgundy);
+        }
+        .headingGenres{
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-start;
+        }
+
+        /* ===== Page-wide layout wrapper ===== */
+        .profilePageWrap{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            gap:24px;
+            width:94%;
+            max-width:1100px;
+            margin:20px auto;
+        }
+
+        .selectorColumn{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+            flex:1 1 380px;
+            min-width:320px;
+        }
+
+        .savedGenres{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            background-color:var(--surface);
+            padding:20px;
+            border-radius:12px;
+            border:1px solid var(--border);
+            box-sizing:border-box;
+            margin:0;
+        }
+        #savedGenres, #savedAuthors{
+            color:var(--text);
+            font-size:14px;
+            margin-top:5px;
+        }
+        .allGenres{
+            display:flex;
+            flex-direction:row; 
+            flex-wrap:wrap;
+            justify-content:center;
+            align-items:center;
+            margin-top:20px;
+        }
+        #genreChoice{
+            display:block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border-radius: 5px;
+            border:1px solid var(--accent-burgundy);
+            text-align: center;
+            background-color: var(--bg);
+            color:var(--accent-burgundy);
+            font-weight: bold;
+        }
+        .dropoptions{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            color:var(--text);
+            margin-top:50px;
+        }
+
+        /* ===== Profile card (library catalog card style) ===== */
+       .fulltopprofile{
+    display:flex;
+    flex-direction:column;
+    border:0.1px solid var(--border);
+    flex:1 1 420px;
+    min-width:320px;
+    min-height:480px;
+    border-radius:12px;
+    padding:36px 32px;
+    position:relative;
+    background-color: var(--surface);
+    box-sizing:border-box;
+    margin:0;
+}
+
+.profileHeader{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-bottom:12px;
+}
+
+.profileImg{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.profileNameBlock{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+#name{
+    display:block;
+    width:100%;
+    padding:4px 0;
+    font-size:32px;
+    font-weight:bold;
+    border:0;
+    text-align:left;
+    background:transparent;
+    color:var(--accent-burgundy);
+}
+
+.cardLine{
+    display:block;
+    height:1px;
+    background-color:var(--border);
+    margin-top:12px;
+}
+
+.bioLine{
+    margin:36px 0 0 0;
+    padding-left:134px;
+    font-size:16px;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--text);
+    min-height:3em;
+}
+.bioLine:empty::before{
+    content: attr(data-placeholder);
+    color:var(--border);
+}
+
+.favBookRow{
+    display:flex;
+    flex-direction:column;
+    margin-top:40px;
+    padding-left:134px;
+}
+
+.favBookLabel{
+    font-size:12px;
+    letter-spacing:0.03em;
+    color:var(--border);
+    margin-bottom:6px;
+}
+
+#favBook{
+    display:block;
+    width:100%;
+    max-width:400px;
+    padding:0 0 6px 0;
+    font-size:20px;
+    font-weight:bold;
+    border:0;
+    border-bottom:1px dashed var(--border);
+    text-align:left;
+    background:transparent;
+    color:var(--accent-burgundy);
+}
+
+.joinStamp{
+    position:absolute;
+    bottom:20px;
+    right:28px;
+    font-size:12px;
+    color:var(--border);
+    margin:0;
+}
+    </style>
+
+    <script src="signup.js"></script>
+</body>
+</html>
