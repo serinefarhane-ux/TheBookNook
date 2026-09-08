@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML + CSS</title>
+    <title>Favorite Books</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-      <div class = "navbar">
+     <div class = "navbar">
         <nav>
           <ul>
             <li>
@@ -28,13 +27,22 @@
                 <a href="reading.html">Reading Log</a>
             </li>
               <li>
-                <a href="TBR.html">TBR List</a>
+          <div class="dropdown">
+          <a href="readinglists.html">Reading Lists</a>
+          <div class="dropdown-content" id="dropdown1">
+            <a href="TBR.html">TBR List</a>
+            <a href="fav.html">Favorite Books</a>
+          </div>
+        </div>
             </li>
+            <li><a href="profile.html">Profile</a></li>
+            
           </ul>
         </nav>
       </div>
+    
       <div class="headings">
-             <h1 id="meow">Book Recommendations</h1>
+             <h1 id="meow">Your Favorites</h1>
       <h3 class="picks">Check out your latest picks! Hover over the cards to see more information.</h3>
  
       </div>
@@ -2918,6 +2926,10 @@ h4 {
   display: none !important;
 }
 </style>
+<div class="endbtn">
+        <a id="save1" href="cat.html">Add to Favorites ⮕</a>
+    </div>
+
 <button id="reset1">Clear Favorites List</button>
 
 <div class="newrec">
@@ -2931,6 +2943,51 @@ width="500"
 height="250">
 </iframe>
 <style>   
+#save1{
+    font-size:13px;
+    padding:8px;
+    color:var(--bg);
+    font-weight:1000;
+    background-color: var(--accent-sage);
+    padding:15px;
+    width:150px;
+    border-radius:10px;
+   text-align:center;
+   text-decoration:none;
+   margin-left:80%;
+    margin-right:20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+} 
+#save1:hover{
+  
+   transform: scale(1.05);
+   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.0);
+}
+
+#reset1{
+    font-size:13px;
+    padding:15px;
+    color:var(--bg);
+    font-weight:1000;
+    background-color: var(--accent-burgundy);
+    width:150px;
+    border-radius:10px;
+    display:flex;
+    margin-left:10%;
+    margin-bottom:50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+#reset1:hover{
+   transform: scale(1.05);
+   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.0);
+}
+.endbtn{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:50px;
+}
 .newheading{
     display:flex;
     flex-direction: column;
