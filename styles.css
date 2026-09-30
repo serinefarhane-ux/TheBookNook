@@ -477,3 +477,153 @@ color:var(--nav-text);
   padding:10px;
   margin-left:10px;
 }
+.everysinglerec {
+  width: 100%;
+  max-width: 1750px;
+  margin: 45px auto;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 55px;
+  align-items: stretch;
+}
+
+.fullRec {
+  width: 100%;
+  height: 590px;
+  min-width: 0;
+  perspective: 1000px;
+}
+
+.fullRecinner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.recfront,
+.recBack {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.recfront {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 30px 25px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.bookcover {
+  width: 100%;
+  height: 410px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 18px;
+}
+
+.genre {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.genre p,
+.romantasy p,
+.romance p,
+.mystery p,
+.fantasy p,
+.contemporary {
+  margin: 0;
+  padding: 9px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.recfront h4 {
+  min-height: 58px;
+  margin: 8px 0 2px;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.recfront .author {
+  min-height: 25px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 25px;
+  margin-top: 2px;
+}
+
+.rating p {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text);
+}
+
+.star p {
+  color: #C9A83E;
+  font-size: 23px;
+}
+
+.recBack {
+  padding: 30px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Keep all four cards the same height */
+
+.fullRec,
+.fullRecinner,
+.recfront,
+.recBack {
+  box-sizing: border-box;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .everysinglerec {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .everysinglerec {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .everysinglerec {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .fullRec {
+    height: 590px;
+  }
+}
